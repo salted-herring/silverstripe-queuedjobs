@@ -91,7 +91,7 @@ abstract class AbstractQueuedJob implements QueuedJob
      */
     public function getSignature()
     {
-        return md5(get_class($this) . serialize($this->jobData));
+        return md5(get_class($this));
     }
 
     /**
